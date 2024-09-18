@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisaje con Flores</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .background {
+            background-image: url('tu-paisaje.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+        
+        .flower {
+            width: 15vw; /* Cambiado a unidades viewport */
+            height: 15vw; /* Cambiado a unidades viewport */
+            max-width: 200px; /* Máximo tamaño */
+            max-height: 200px; /* Máximo tamaño */
+            background-image: url('https://i.pinimg.com/236x/60/e7/70/60e770eaac7707a32b0d233ee4602673.jpg');
+            background-size: cover;
+            position: absolute;
+            bottom: -60px;
+            animation: bloom 2s forwards;
+        }
+        
+        @keyframes bloom {
+            0% {
+                bottom: -60px;
+                opacity: 0;
+            }
+            100% {
+                bottom: 20%;
+                opacity: 1;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-top: 1px solid #ddd;
+            background-image: url('https://i.pinimg.com/236x/c5/55/d6/c555d6609d416d372c2e0e5fe598bc67.jpg');
+            background-repeat: repeat-x;
+            background-size: contain;
+            background-position: bottom;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        footer p {
+            margin: 10px 0 0;
+        }
+
+        /* Estilos para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .flower {
+                width: 20vw; /* Aumentar tamaño de flores en tabletas */
+                height: 20vw;
+            }
+        }
+
+        /* Estilos para pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            .flower {
+                width: 30vw; /* Aumentar tamaño de flores en móviles */
+                height: 30vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio controls autoplay>
+        <source src="Diseño-sin-título-_1_.mp3" type="audio/mpeg">
+        <source src="horse.ogv" type="audio/ogg">
+    </audio>  
+
+    <div class="background">
+        <div class="flower" style="left: 10%;"></div>
+        <div class="flower" style="left: 30%;"></div>
+        <div class="flower" style="left: 50%;"></div>
+        <div class="flower" style="left: 70%;"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+    </footer>
+</body>
+</html>
